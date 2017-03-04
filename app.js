@@ -14,17 +14,15 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
-var blogPosts = blogs.getBlogs();
-
 app.get('/blog', (req,res) =>{
 	Blog.findAll({}).then(function(rows){
 		res.render("blog/index", {posts: rows});
-		console.log("HERERERERERE >>>>>> ", rows[1].dataValues);
-		// console.log("HERERERERERE >>>>>> ", rows[1].dataValues);
+		console.log(rows[1].dataValues);
+
 	})
 });
 
-app.get('/newpost',(req,res) =>{   // get form to enter new post
+app.get('/newpost',(req,res) =>{ 
 	res.render("blog/newpost");
 });
 
@@ -39,7 +37,7 @@ app.post('/create', function(req,res){
 	}).then(function(post){
 		  console.log(post);
 		  res.json(post);
-	});	
+	});
 });
 
 var Blog = sequelize.define('blogs', {
