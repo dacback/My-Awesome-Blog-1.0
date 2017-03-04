@@ -1,0 +1,92 @@
+body {
+    padding-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+	
+html, body {
+  overflow-x: hidden;
+}
+
+
+footer {
+    margin: 50px 0;
+}
+
+.container-header {
+	position:relative;
+	margin:0 -9999rem;
+	padding:.25rem 9999rem;
+	background: rgba(0,0,0,0.5);
+	height:400px;
+	overflow: hidden;
+}
+
+img {
+	position:relative;
+	max-width:100%;
+	height:auto;
+}
+
+.blogTitle {
+	font-family:sans-serif;
+	font-weight:900;
+	line-height:1.1;
+	font-size:32px;
+	margin:30px 0px 10px 0px;
+}
+
+.blogTitle:hover {
+	color:#077abd;
+}
+
+.subtitle {
+	padding-left: 10px;
+	font-family:Helvetica;
+	font-weight:200px;
+	color:#2f2f30;
+}
+
+.postBody {
+	padding-left: 10px;
+	font-family:serif;
+	line-height:1.2em;
+	font-size:1.1em;	
+}
+
+.blogFooter{
+	padding-left: 10px;	
+}
+
+
+.author {
+	float:left;
+}
+
+.postDate {
+	float:right;
+}
+
+hr {
+	border:1px solid #dae2e7;
+}
+
+.about_me{
+	display:none;
+}
+
+.content_tag {
+	margin-top:5px 0px;
+	padding:.7em 0em;
+	font-size:.8em;
+}
+
+#authlink {
+	width:33%;
+}
+
+input[type="text"]#pub_date {
+	width:33%;
+}
+
+input[type="text"]#authlink {
+	width:33%;
+}

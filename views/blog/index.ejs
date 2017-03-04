@@ -1,0 +1,45 @@
+    <% include header %>
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+
+                <div class="blogNews">
+                    <div class="blog-posts">
+                        <% for(var i = 0; i<posts.length; i++) { %>
+
+                            <div class="stories" id="post-<%= posts[i].id %>" >
+                                <div class="blogTitle">
+                                    <%= posts[i].title %>
+                                </div>
+                                <div class="subtitle">
+                                    <h4>
+                                     <%= posts[i].subtitle %>
+                                    </h4>
+                                </div>
+                                <div class="postBody" id="topPost">
+                                    <p> <%= posts[i].article %> </p>
+                                </div>
+
+                                <div class="blogFooter">
+                                	<span class="author"><a href=<%- posts[i].authlink %>> <%= posts[i].author %> </a></span>
+                                    <span class="postDate"><%= posts[i].pub_date %></span>
+                                </div>
+                                <div style="clear: both;"></div>
+                            </div>
+                        <hr />
+
+                      <% } %>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <% include footer %>
